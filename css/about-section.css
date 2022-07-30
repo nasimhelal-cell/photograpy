@@ -1,0 +1,123 @@
+/* ===============about section=============== */
+.about-right>p {
+    margin-bottom: 1rem;
+}
+
+.about-left div:nth-child(2),
+.about-left div:nth-child(3) {
+    display: none;
+}
+
+.about-left .frame-lg img {
+    transition: var(--transition);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.about-left .frame-lg img:hover {
+    border: 1rem solid var(--clr-img-border);
+}
+
+.about-right {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media (width>=769px) {
+    .about-container {
+        display: flex;
+        gap: 10%;
+    }
+
+    .about-container>div {
+        flex-basis: 45%;
+        text-align: left;
+    }
+
+
+    .about-left .frame-lg img:hover {
+        border: none
+    }
+
+    .about-left .frame-lg img {
+        margin-top: 2rem;
+        width: 100%;
+
+    }
+}
+
+@media (width>=1000px) {
+    .about-container {
+        margin-top: 30rem !important;
+    }
+
+    .about-left .frame-lg img:hover {
+        border: 1rem solid var(--clr-img-border);
+    }
+
+}
+
+@media(width>=1200px) {
+    .about-left {
+        position: relative;
+        transition: var(--transition);
+    }
+
+    .about-left>* {
+        position: absolute;
+    }
+
+    .about-left .frame-sm-bg {
+        width: 50%;
+        height: 50%;
+        background: var(--clr-img-border);
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .about-left div:nth-child(2),
+    .about-left div:nth-child(3) {
+        display: block;
+    }
+
+    .about-left .frame-lg {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        width: 85%;
+        transition: var(--transition);
+    }
+
+    .about-left .frame-lg img {
+        filter: saturate(0) brightness(.8);
+    }
+
+    .about-left .frame-sm {
+        width: 70%;
+        right: -5rem;
+        bottom: 20%;
+        transition: var(--transition);
+    }
+
+    .about-left .frame-lg img:hover {
+        border: none;
+    }
+
+    .about-left:hover .frame-lg img {
+        filter: saturate(1) brightness(1);
+        border: 1rem solid var(--clr-img-border);
+    }
+
+    .about-left:hover .frame-lg {
+        bottom: 0;
+        left: 0;
+    }
+
+    .about-left:hover .frame-sm {
+        opacity: 0;
+        visibility: hidden;
+        right: 10%;
+        bottom: 0;
+    }
+}

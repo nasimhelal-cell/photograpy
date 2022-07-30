@@ -1,0 +1,118 @@
+
+/* collage */
+
+.collage-container {
+    margin-top: 3rem;
+}
+
+.collage-gallery-images {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "a b c"
+        "d e g"
+        "f f g"
+        "f f g";
+animation: layout-change 20000ms linear infinite;
+}
+
+.collage-gallery-image:nth-child(1) {
+    grid-area: a;
+}
+
+.collage-gallery-image:nth-child(2) {
+    grid-area: b;
+}
+
+.collage-gallery-image:nth-child(3) {
+    grid-area: c;
+}
+
+.collage-gallery-image:nth-child(4) {
+    grid-area: d;
+}
+
+.collage-gallery-image:nth-child(5) {
+    grid-area: e;
+}
+
+.collage-gallery-image:nth-child(6) {
+    grid-area: f;
+}
+
+.collage-gallery-image:nth-child(7) {
+    grid-area: g;
+}
+
+.collage-gallery-image {
+    border: .7rem solid var(--clr-img-border);
+}
+
+.collage-gallery-image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+@keyframes layout-change {
+    0% {
+      grid-template-areas:
+        "d e a"
+        "b c g"
+        "f f g"
+        "f f g";
+    }
+
+    25% {
+      grid-template-areas:
+        "f f g"
+        "f f g"
+        "b c g"
+        "e d a";
+    }
+
+    45% {
+      grid-template-areas:
+        "g f f"
+        "g f f"
+        "b c g"
+        "e d a";
+    }
+
+    50% {
+      grid-template-areas:
+        "g b c"
+        "g d e"
+        "g f f"
+        "a f f";
+    }
+
+    75% {
+      grid-template-areas:
+        "a b c"
+        "g d e"
+        "g f f"
+        "g f f";
+    }
+
+    100% {
+      grid-template-areas:
+        "d e a"
+        "b c g"
+        "f f g"
+        "f f g";
+    }
+  }
+
+
+@media(width>=1200px) {
+
+    .collage-container .gallery-txt-content>* {
+        text-align: right;
+        width: 60%;
+        margin-left: auto;
+    }
+    .collage-gallery-image {
+        border: 1rem solid var(--clr-img-border);
+    }
+}

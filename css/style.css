@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url(global.css);
+@import url(navbar.css);
+@import url(hero.css);
+@import url(header-positioning.css);
+@import url(about-section.css);
+@import url(gallery-section.css);
+@import url(collage-section.css);
+@import url(footer.css);

@@ -1,0 +1,49 @@
+
+
+/* header position images  */
+.header-position{
+    display: none; 
+}
+@media(width>=1000px){
+    .header-position{
+        display: block;
+    }
+}
+.header-position-images{
+    display: flex;
+    width: 50%;
+    margin-inline: auto;
+    gap: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 40em;
+    transform: translateX(-50%);
+    justify-content: center;
+    
+}
+.header-position-images>div{
+    border: .5rem solid var(--clr-img-border);
+    width: 20em;
+    height: 25em;
+}
+.header-position-images div>img{
+    height: 100%;
+}
+.header-position-images .image1{
+    transform: rotate(-10deg);
+    transition: var(--transition);
+    transform-origin: bottom left;
+    margin-left: -20rem;
+}
+.header-position-images .image2{
+    margin-left: -20rem;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+.header-position-images:hover .image1{
+    transform: rotate(0deg);margin-left: 0;
+}
+.header-position-images:hover .image2{
+    margin-left: 0;
+    transform: rotate(0deg);
+}

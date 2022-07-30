@@ -1,0 +1,121 @@
+/* ==========navbar css========= */
+nav {
+    padding: 1em 0;
+    box-shadow: 0 .2rem .7rem rgba(0 0 0 /.3);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: var(--bg-clr-body);
+}
+
+.nav-container,
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container {
+    position: relative;
+}
+
+.logo a {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--clr-text-light);
+
+}
+
+.nav-menu li a {
+    padding: .5rem 1rem;
+    color: var(--clr-text-muted);
+    font-weight: 300;
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+
+.nav-menu li a:hover {
+    color: var(--clr-text-light);
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .3em;
+}
+
+.social-links a {
+    background-color: rgba(0 0 0 /.3);
+    padding: .1em .35em;
+    color: var(--bg-clr-light);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.social-links a:hover {
+    color: #000;
+    background-color: var(--bg-clr-light);
+}
+
+/* menu button  */
+#hamburger {
+    display: none;
+}
+
+[for="hamburger"] {
+    color: var(--clr-text-muted);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: none;
+}
+
+
+@media (width<=714px) {
+
+    #hamburger:checked~ul,
+    #hamburger:checked~.social-links {
+        display: none;
+    }
+    
+
+    .social-links {
+        position: absolute;
+        top: 690%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99;
+    }
+
+    [for="hamburger"] {
+        display: block;
+        border: 2px solid var(--clr-text-light);
+        padding: .1em .5em;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 145%;
+        right: 0;
+        flex-direction: column;
+        width: 100%;
+        z-index: 99;
+        gap: .5em;
+        background: var(--bg-clr-body);
+        padding: 1em .5em 3em .5em;
+        border: 1px solid var(--clr-img-border);
+    }
+
+    .nav-menu li {
+        border-bottom: 1px solid var(--clr-img-border);
+        padding: .3em 0;
+    }
+
+    .nav-menu li:last-child {
+        margin-bottom: 10px;
+    }
+}
